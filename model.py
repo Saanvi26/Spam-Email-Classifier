@@ -10,6 +10,7 @@ df=pd.read_csv('mail_data.csv')
 
 data=df.where((pd.notnull(df)),'')
 
+# manually encoding the categories (Can use LabelEncoder too)
 data.loc[data['Category']=='spam','Category',]=0
 data.loc[data['Category']=='ham','Category',]=1
 
